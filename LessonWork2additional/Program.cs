@@ -6,59 +6,25 @@ using System.Threading.Tasks;
 
 namespace LessonWork2additional
 {
+    
+
+
     class Program
     {
-
-        class Car
+        static void GetDigit(ref int digit)
         {
+            digit = new Random().Next(0,10);
 
-            public string driver;
-            public int currentSpeed;
-
-            public Car(string name = "Michael", int speed = 0)
-            {
-                driver = name;
-                currentSpeed = speed;
-
-            }
-            
-            
-
-
-            public void UpSpeed(int add)
-            {
-                currentSpeed += add;
-
-            }
-
-
-            public void Print()
-            {
-                Console.WriteLine($"Driver {driver} is going with speed {currentSpeed} km/h!");
-
-            }
         }
-
-
-
-
-
-
-
-
-
-
 
         static void Main(string[] args)
         {
-            var car = new Car { currentSpeed = 200, driver = "Luis"};
+            int i;
+            GetDigit(ref i);
+
+
+            Console.WriteLine(i);           
             
-            
-            for (int i = 0; i < 10; i++)
-            {
-                car.UpSpeed(10);
-                car.Print();
-            }
             
         }
     }
